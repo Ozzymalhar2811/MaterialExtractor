@@ -8,8 +8,12 @@ For eg to extract the properties of materials under the category 'High carbon st
 
 http://www.matweb.com/Search/MaterialGroupSearch.aspx?GroupID=249'
 
+## Libraries Used
+> math
+> requests
+> BeautifulSoup
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%-------------------------------------------------------------------------------------------------------------------------------------%%%
 
 A simplified Functionality of the code:
 
@@ -24,3 +28,17 @@ A simplified Functionality of the code:
 > Use the Rampberg Osgood Coeff to obtain strains at differnt stress levels. Store the stresses and strain for the individual material in an array
 
 > Create a CSV file for each individual material. This can later be imported in any preprocessor to assign material properties for assigning material properties
+
+%%%-------------------------------------------------------------------------------------------------------------------------------------%%%
+
+## Files : 
+
+> scrapper_main.py: The main file used for importing the class and creating its object
+> material_class.py: Functions defined in the class are under this file
+
+## How to run the script:
+
+> Make sure both the files are in the same directory
+> In the command prompt enter "python scrapper_main.py" and hit Enter.
+> While the script is running you will see which materials are being extracted and which material curves have been made
+> You will find the csv files being generated in the same directory

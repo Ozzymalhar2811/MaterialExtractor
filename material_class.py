@@ -33,7 +33,7 @@ class ParamMats():
                     links.append(a['href'])
 
         return links
-
+    #------------------------------------------------------------------------------------------------------------------------------#
     # This function is used to:
     # Take out material title from top of page
     # Take o ut entire data from all the rows of the page. 
@@ -71,6 +71,7 @@ class ParamMats():
             materials_with_metric_list.append(material_dict)
         return materials_with_metric_list
 
+    #------------------------------------------------------------------------------------------------------------------------------#
 
     # The below functions Cleans the data to keep only required nums
     # If sepc dat != ,a constant data is assume
@@ -113,6 +114,7 @@ class ParamMats():
             cleaned_up_data.append(cleaned_data)
 
         return cleaned_up_data
+    #------------------------------------------------------------------------------------------------------------------------------#
 
     #Call the needed values from the dictionary
     #To calculate the stresses at assumed points, and the respective strains,
@@ -163,6 +165,7 @@ class ParamMats():
         result = zip(b_result, a_result)
 
         return list(result)
+    #------------------------------------------------------------------------------------------------------------------------------#
 
     #Cleanup the name of the material to remove spaces
     #Create a csv file of the cleaned name containg only the array
@@ -176,6 +179,8 @@ class ParamMats():
             zipped_list = self.calculate_arrays(material_dict)
             df = pd.DataFrame(zipped_list)
             df.to_csv(f"{printable_material_name}.csv", header=False, index=False)
+
+    #------------------------------------------------------------------------------------------------------------------------------#
 
     # In case the elongation at break is given as a range
     # Extract both the numbers (min and max) and take the max
@@ -195,7 +200,7 @@ class ParamMats():
         else:
             return string_val
 
-    
+    #------------------------------------------------------------------------------------------------------------------------------#
     def create_material_curve_csvs(self):
         links = self.get_material_sheet_links()
         materials_list = self.get_params_for_materials(links)
