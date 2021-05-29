@@ -9,3 +9,5 @@ param_mat_obj = ParamMats()
 
 if __name__ == "__main__":
     param_mat_obj.create_material_curve_csvs()
+
+#name changed
